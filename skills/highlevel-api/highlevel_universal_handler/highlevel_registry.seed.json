@@ -1,0 +1,6576 @@
+[
+  {
+    "access": "Sub-Account",
+    "action": "get_affiliate",
+    "aliases": [
+      "get"
+    ],
+    "child": "affiliates",
+    "description": "Get affiliate",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/affiliate-manager/:locationId/affiliates/:id",
+    "resolver_hints": [],
+    "root": "affiliate_manager",
+    "scope": "affiliate-manager/affiliates.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_affiliates",
+    "aliases": [
+      "list"
+    ],
+    "child": "affiliates",
+    "description": "List affiliates",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/affiliate-manager/:locationId/affiliates",
+    "resolver_hints": [],
+    "root": "affiliate_manager",
+    "scope": "affiliate-manager/affiliates.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_commissions",
+    "aliases": [
+      "list"
+    ],
+    "child": "commissions",
+    "description": "List commissions",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/affiliate-manager/:locationId/commissions",
+    "resolver_hints": [],
+    "root": "affiliate_manager",
+    "scope": "affiliate-manager/commissions.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_payouts",
+    "aliases": [
+      "list"
+    ],
+    "child": "payouts",
+    "description": "List payouts",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/affiliate-manager/:locationId/payouts",
+    "resolver_hints": [],
+    "root": "affiliate_manager",
+    "scope": "affiliate-manager/payouts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_agent",
+    "aliases": [
+      "create"
+    ],
+    "child": "agents",
+    "description": "Create agent",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/agent",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_agent",
+    "aliases": [
+      "delete"
+    ],
+    "child": "agents",
+    "description": "Delete agent",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/agent/:agentId",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "execute_agent",
+    "aliases": [
+      "execute"
+    ],
+    "child": "agents",
+    "description": "Execute agent",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/agent/:agentId/execute",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "execute_agent_deprecated",
+    "aliases": [
+      "deprecated_execute"
+    ],
+    "child": "agents",
+    "description": "Deprecated execute agent",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/public-api/agents/:agentId/execute",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_agent",
+    "aliases": [
+      "get"
+    ],
+    "child": "agents",
+    "description": "Get agent",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/agent/:agentId",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_agent_deprecated",
+    "aliases": [
+      "deprecated_get"
+    ],
+    "child": "agents",
+    "description": "Deprecated get agent",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/public-api/agents/:agentId",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_agents",
+    "aliases": [
+      "list"
+    ],
+    "child": "agents",
+    "description": "List agents",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/agent",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_agents_deprecated",
+    "aliases": [
+      "deprecated_list"
+    ],
+    "child": "agents",
+    "description": "Deprecated list agents",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/public-api/agents",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "promote_to_production",
+    "aliases": [
+      "publish",
+      "promote"
+    ],
+    "child": "agents",
+    "description": "Promote to production",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/agent/versions/:versionId/publish",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_agent_metadata",
+    "aliases": [
+      "update_metadata"
+    ],
+    "child": "agents",
+    "description": "Update agent metadata",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/agent/:agentId",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_agent_version",
+    "aliases": [
+      "update_version",
+      "update"
+    ],
+    "child": "agents",
+    "description": "Update agent version",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/agent-studio/agent/versions/:versionId",
+    "resolver_hints": [],
+    "root": "ai_agent_studio",
+    "scope": "agent-studio/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_association",
+    "aliases": [
+      "create"
+    ],
+    "child": "associations",
+    "description": "Create association",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_association",
+    "aliases": [
+      "delete"
+    ],
+    "child": "associations",
+    "description": "Delete association",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/:associationId",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_association",
+    "aliases": [
+      "get"
+    ],
+    "child": "associations",
+    "description": "Get association",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/:associationId",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_association_by_key",
+    "aliases": [
+      "get_by_key"
+    ],
+    "child": "associations",
+    "description": "Get association by key",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/key/:key_name",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_association_by_object_key",
+    "aliases": [
+      "get_by_object_key"
+    ],
+    "child": "associations",
+    "description": "Get association by object key",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/objectKey/:objectKey",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_associations",
+    "aliases": [
+      "list"
+    ],
+    "child": "associations",
+    "description": "List associations",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_association",
+    "aliases": [
+      "update"
+    ],
+    "child": "associations",
+    "description": "Update association",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/:associationId",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_relation",
+    "aliases": [
+      "create"
+    ],
+    "child": "relations",
+    "description": "Create relation",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/relations",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations/relation.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_relations",
+    "aliases": [
+      "list"
+    ],
+    "child": "relations",
+    "description": "Get relations",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/associations/relations/:recordId",
+    "resolver_hints": [],
+    "root": "associations",
+    "scope": "associations/relation.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_authors",
+    "aliases": [
+      "list"
+    ],
+    "child": "authors",
+    "description": "List blog authors",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/blogs/authors",
+    "resolver_hints": [],
+    "root": "blogs",
+    "scope": "blogs/author.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_categories",
+    "aliases": [
+      "list"
+    ],
+    "child": "categories",
+    "description": "List blog categories",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/blogs/categories",
+    "resolver_hints": [],
+    "root": "blogs",
+    "scope": "blogs/category.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "check_slug",
+    "aliases": [
+      "check_slug"
+    ],
+    "child": "posts",
+    "description": "Check blog post slug",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/blogs/posts/url-slug-exists",
+    "resolver_hints": [],
+    "root": "blogs",
+    "scope": "blogs/check-slug.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_post",
+    "aliases": [
+      "create"
+    ],
+    "child": "posts",
+    "description": "Create blog post",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/blogs/posts",
+    "resolver_hints": [],
+    "root": "blogs",
+    "scope": "blogs/post.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_post",
+    "aliases": [
+      "update"
+    ],
+    "child": "posts",
+    "description": "Update blog post",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/blogs/posts/:postId",
+    "resolver_hints": [],
+    "root": "blogs",
+    "scope": "blogs/post-update.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_brand_board",
+    "aliases": [
+      "create"
+    ],
+    "child": "brand_boards",
+    "description": "Creates a new brand board",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_brand_board",
+    "aliases": [
+      "delete"
+    ],
+    "child": "brand_boards",
+    "description": "Deletes a Brand Board",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/:locationId/:id",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_brand_board",
+    "aliases": [
+      "get"
+    ],
+    "child": "brand_boards",
+    "description": "Retrieves a specific Brand Board by ID",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/:locationId/:id",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_brand_boards",
+    "aliases": [
+      "list"
+    ],
+    "child": "brand_boards",
+    "description": "Retrieves all Brand Boards for a location",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/:locationId",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_brand_board",
+    "aliases": [
+      "update"
+    ],
+    "child": "brand_boards",
+    "description": "Updates an existing Brand Board",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/:locationId/:id",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_brand_voice",
+    "aliases": [
+      "create"
+    ],
+    "child": "brand_voices",
+    "description": "Create a brand voice for a location",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/public/v1/locations/:locationId/voices",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_brand_voice",
+    "aliases": [
+      "delete"
+    ],
+    "child": "brand_voices",
+    "description": "Delete a brand voice by ID",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/public/v1/locations/:locationId/voices/:brandVoiceId",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_brand_voice",
+    "aliases": [
+      "get"
+    ],
+    "child": "brand_voices",
+    "description": "Get a brand voice by ID",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/public/v1/locations/:locationId/voices/:brandVoiceId",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_brand_voices",
+    "aliases": [
+      "list"
+    ],
+    "child": "brand_voices",
+    "description": "Get list of brand voices for a location",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/public/v1/locations/:locationId/voices",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "set_default_brand_voice",
+    "aliases": [
+      "set_default"
+    ],
+    "child": "brand_voices",
+    "description": "Set a brand voice as default",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/public/v1/locations/:locationId/voices/:brandVoiceId/default",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_brand_voice",
+    "aliases": [
+      "update"
+    ],
+    "child": "brand_voices",
+    "description": "Update a brand voice by ID",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/brand-boards/public/v1/locations/:locationId/voices/:brandVoiceId",
+    "resolver_hints": [],
+    "root": "brand_boards",
+    "scope": "brand-boards.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_business",
+    "aliases": [
+      "create"
+    ],
+    "child": "businesses",
+    "description": "Create business",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/businesses",
+    "resolver_hints": [],
+    "root": "business",
+    "scope": "businesses.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_business",
+    "aliases": [
+      "delete"
+    ],
+    "child": "businesses",
+    "description": "Delete business",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/businesses/:businessId",
+    "resolver_hints": [],
+    "root": "business",
+    "scope": "businesses.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_business",
+    "aliases": [
+      "get"
+    ],
+    "child": "businesses",
+    "description": "Get business",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/businesses/:businessId",
+    "resolver_hints": [],
+    "root": "business",
+    "scope": "businesses.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_businesses",
+    "aliases": [
+      "list"
+    ],
+    "child": "businesses",
+    "description": "List businesses",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/businesses",
+    "resolver_hints": [],
+    "root": "business",
+    "scope": "businesses.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_business",
+    "aliases": [
+      "update"
+    ],
+    "child": "businesses",
+    "description": "Update business",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/businesses/:businessId",
+    "resolver_hints": [],
+    "root": "business",
+    "scope": "businesses.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_free_slots",
+    "aliases": [
+      "free_slots"
+    ],
+    "child": "availability",
+    "description": "Get calendar free slots",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/:calendarId/free-slots",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_appointment",
+    "aliases": [
+      "create_appointment"
+    ],
+    "child": "calendar_events",
+    "description": "Create appointment",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/events/appointments",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/events.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_block_slot",
+    "aliases": [
+      "create_block_slot"
+    ],
+    "child": "calendar_events",
+    "description": "Create block slot",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/events/block-slots",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/events.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_event",
+    "aliases": [
+      "delete"
+    ],
+    "child": "calendar_events",
+    "description": "Delete event",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/events/:eventId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/events.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_appointment",
+    "aliases": [
+      "get_appointment"
+    ],
+    "child": "calendar_events",
+    "description": "Get appointment",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/events/appointments/:eventId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/events.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_blocked_slots",
+    "aliases": [
+      "blocked_slots"
+    ],
+    "child": "calendar_events",
+    "description": "Get blocked slots",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/blocked-slots",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/events.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_events",
+    "aliases": [
+      "list"
+    ],
+    "child": "calendar_events",
+    "description": "List calendar events",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/events",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/events.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_appointment",
+    "aliases": [
+      "update_appointment"
+    ],
+    "child": "calendar_events",
+    "description": "Update appointment",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/events/appointments/:eventId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/events.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_block_slot",
+    "aliases": [
+      "update_block_slot"
+    ],
+    "child": "calendar_events",
+    "description": "Update block slot",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/events/block-slots/:eventId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/events.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_group",
+    "aliases": [
+      "create"
+    ],
+    "child": "calendar_groups",
+    "description": "Create calendar group",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/groups",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/groups.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_group",
+    "aliases": [
+      "delete"
+    ],
+    "child": "calendar_groups",
+    "description": "Delete calendar group",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/groups/:groupId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/groups.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_groups",
+    "aliases": [
+      "list"
+    ],
+    "child": "calendar_groups",
+    "description": "List calendar groups",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/groups",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/groups.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_group",
+    "aliases": [
+      "update"
+    ],
+    "child": "calendar_groups",
+    "description": "Update calendar group",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/groups/:groupId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/groups.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_group_status",
+    "aliases": [
+      "update_status"
+    ],
+    "child": "calendar_groups",
+    "description": "Update group status",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/groups/:groupId/status",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/groups.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "validate_group_slug",
+    "aliases": [
+      "validate_slug"
+    ],
+    "child": "calendar_groups",
+    "description": "Validate calendar group slug",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/groups/validate-slug",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/groups.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_resource",
+    "aliases": [
+      "create"
+    ],
+    "child": "calendar_resources",
+    "description": "Create calendar resource",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/resources",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/resources.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_resource",
+    "aliases": [
+      "delete"
+    ],
+    "child": "calendar_resources",
+    "description": "Delete calendar resource",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/resources/:resourceType/:id",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/resources.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_resource",
+    "aliases": [
+      "get"
+    ],
+    "child": "calendar_resources",
+    "description": "Get calendar resource",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/resources/:resourceType/:id",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/resources.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_resources",
+    "aliases": [
+      "list"
+    ],
+    "child": "calendar_resources",
+    "description": "Get calendar resources",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/resources/:resourceType",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/resources.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_resource",
+    "aliases": [
+      "update"
+    ],
+    "child": "calendar_resources",
+    "description": "Update calendar resource",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/resources/:resourceType/:id",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars/resources.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_calendar",
+    "aliases": [
+      "create"
+    ],
+    "child": "calendars",
+    "description": "Create calendar",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_calendar",
+    "aliases": [
+      "delete"
+    ],
+    "child": "calendars",
+    "description": "Delete calendar",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/:calendarId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_calendar",
+    "aliases": [
+      "get"
+    ],
+    "child": "calendars",
+    "description": "Get calendar",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/:calendarId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_calendars",
+    "aliases": [
+      "list"
+    ],
+    "child": "calendars",
+    "description": "List calendars",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_calendar",
+    "aliases": [
+      "update"
+    ],
+    "child": "calendars",
+    "description": "Update calendar",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/calendars/:calendarId",
+    "resolver_hints": [],
+    "root": "calendars",
+    "scope": "calendars.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_campaigns",
+    "aliases": [
+      "list"
+    ],
+    "child": "campaigns",
+    "description": "Get campaigns",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/campaigns/",
+    "resolver_hints": [],
+    "root": "campaigns",
+    "scope": "campaigns.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "get_company",
+    "aliases": [
+      "get"
+    ],
+    "child": "companies",
+    "description": "Get company",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/companies/:companyId",
+    "resolver_hints": [],
+    "root": "companies",
+    "scope": "companies.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_appointments",
+    "aliases": [
+      "list"
+    ],
+    "child": "appointments",
+    "description": "List contact appointments",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/appointments",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "add_to_campaign",
+    "aliases": [
+      "add"
+    ],
+    "child": "campaigns",
+    "description": "Add contact to campaign",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/campaigns/:campaignId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "remove_all_campaigns",
+    "aliases": [
+      "remove_all"
+    ],
+    "child": "campaigns",
+    "description": "Remove contact from all campaigns",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/campaigns/removeAll",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "remove_from_campaign",
+    "aliases": [
+      "remove"
+    ],
+    "child": "campaigns",
+    "description": "Remove contact from campaign",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/campaigns/:campaignId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_contact",
+    "aliases": [
+      "create"
+    ],
+    "child": "contacts",
+    "description": "Create contact",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_contact",
+    "aliases": [
+      "delete"
+    ],
+    "child": "contacts",
+    "description": "Delete contact",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_contact",
+    "aliases": [
+      "get"
+    ],
+    "child": "contacts",
+    "description": "Get contact",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_contacts_by_business",
+    "aliases": [
+      "by_business"
+    ],
+    "child": "contacts",
+    "description": "Get contacts by business",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/business/:businessId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_contacts",
+    "aliases": [
+      "list",
+      "search"
+    ],
+    "child": "contacts",
+    "description": "List contacts",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_contact",
+    "aliases": [
+      "update"
+    ],
+    "child": "contacts",
+    "description": "Update contact",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_note",
+    "aliases": [
+      "create"
+    ],
+    "child": "notes",
+    "description": "Create contact note",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/notes",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_note",
+    "aliases": [
+      "delete"
+    ],
+    "child": "notes",
+    "description": "Delete contact note",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/notes/:id",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_note",
+    "aliases": [
+      "get"
+    ],
+    "child": "notes",
+    "description": "Get contact note",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/notes/:id",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_notes",
+    "aliases": [
+      "list"
+    ],
+    "child": "notes",
+    "description": "List contact notes",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/notes",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_note",
+    "aliases": [
+      "update"
+    ],
+    "child": "notes",
+    "description": "Update contact note",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/notes/:id",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "add_tags",
+    "aliases": [
+      "add"
+    ],
+    "child": "tags",
+    "description": "Add tags to contact",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/tags",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "remove_tags",
+    "aliases": [
+      "remove"
+    ],
+    "child": "tags",
+    "description": "Remove tags from contact",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/tags",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_task",
+    "aliases": [
+      "create"
+    ],
+    "child": "tasks",
+    "description": "Create contact task",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/tasks",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_task",
+    "aliases": [
+      "delete"
+    ],
+    "child": "tasks",
+    "description": "Delete contact task",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/tasks/:taskId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_task",
+    "aliases": [
+      "get"
+    ],
+    "child": "tasks",
+    "description": "Get contact task",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/tasks/:taskId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_tasks",
+    "aliases": [
+      "list"
+    ],
+    "child": "tasks",
+    "description": "List contact tasks",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/tasks",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "mark_task_completed",
+    "aliases": [
+      "complete"
+    ],
+    "child": "tasks",
+    "description": "Mark contact task completed",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/tasks/:taskId/completed",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_task",
+    "aliases": [
+      "update"
+    ],
+    "child": "tasks",
+    "description": "Update contact task",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/tasks/:taskId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "add_to_workflow",
+    "aliases": [
+      "add"
+    ],
+    "child": "workflow",
+    "description": "Add contact to workflow",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/workflow/:workflowId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "remove_from_workflow",
+    "aliases": [
+      "remove"
+    ],
+    "child": "workflow",
+    "description": "Remove contact from workflow",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/contacts/:contactId/workflow/:workflowId",
+    "resolver_hints": [],
+    "root": "contacts",
+    "scope": "contacts.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "attach_action_to_agent",
+    "aliases": [
+      "create",
+      "attach"
+    ],
+    "child": "actions",
+    "description": "Attach action to agent",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId/actions",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/actions.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_action_by_id",
+    "aliases": [
+      "get"
+    ],
+    "child": "actions",
+    "description": "Get action by id",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId/actions/:actionId",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/actions.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_actions_for_agent",
+    "aliases": [
+      "list"
+    ],
+    "child": "actions",
+    "description": "List actions for an agent",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId/actions/list",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/actions.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "remove_action_from_agent",
+    "aliases": [
+      "delete",
+      "remove"
+    ],
+    "child": "actions",
+    "description": "Remove action from agent",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId/actions/:actionId",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/actions.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_action",
+    "aliases": [
+      "update"
+    ],
+    "child": "actions",
+    "description": "Update action",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId/actions/:actionId",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/actions.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_followup_settings",
+    "aliases": [
+      "followup"
+    ],
+    "child": "actions",
+    "description": "Update followup settings",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId/followup-settings",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/actions.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_agent",
+    "aliases": [
+      "create"
+    ],
+    "child": "agents",
+    "description": "Create Conversation AI agent",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_agent",
+    "aliases": [
+      "delete"
+    ],
+    "child": "agents",
+    "description": "Delete Conversation AI agent",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_agent",
+    "aliases": [
+      "get"
+    ],
+    "child": "agents",
+    "description": "Get Conversation AI agent",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/agents.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "search_agents",
+    "aliases": [
+      "search",
+      "list"
+    ],
+    "child": "agents",
+    "description": "Search Conversation AI agents",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/search",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/agents.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_agent",
+    "aliases": [
+      "update"
+    ],
+    "child": "agents",
+    "description": "Update Conversation AI agent",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/agents/:agentId",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_generation_details",
+    "aliases": [
+      "get"
+    ],
+    "child": "generations",
+    "description": "Get generation details",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversation-ai/generations",
+    "resolver_hints": [],
+    "root": "conversation_ai",
+    "scope": "conversation-ai/generations.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_conversation",
+    "aliases": [
+      "create"
+    ],
+    "child": "conversations",
+    "description": "Create conversation",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_conversation",
+    "aliases": [
+      "delete"
+    ],
+    "child": "conversations",
+    "description": "Delete conversation",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/:conversationsId",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_conversation",
+    "aliases": [
+      "get"
+    ],
+    "child": "conversations",
+    "description": "Get conversation",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/:conversationsId",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_conversation",
+    "aliases": [
+      "update"
+    ],
+    "child": "conversations",
+    "description": "Update conversation",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/:conversationsId",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "cancel_scheduled_email",
+    "aliases": [
+      "cancel_email_schedule"
+    ],
+    "child": "messages",
+    "description": "Cancel scheduled email",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/messages/email/:emailMessageId/schedule",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "cancel_scheduled_message",
+    "aliases": [
+      "cancel_schedule"
+    ],
+    "child": "messages",
+    "description": "Cancel scheduled message",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/messages/:messageId/schedule",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_inbound_message",
+    "aliases": [
+      "inbound"
+    ],
+    "child": "messages",
+    "description": "Create inbound message",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/messages/inbound",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "download_transcription",
+    "aliases": [
+      "download_transcription"
+    ],
+    "child": "messages",
+    "description": "Download message transcription",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/locations/:locationId/messages/:messageId/transcription/download",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_recording",
+    "aliases": [
+      "recording"
+    ],
+    "child": "messages",
+    "description": "Get message recording",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/messages/:messageId/locations/:locationId/recording",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_transcription",
+    "aliases": [
+      "transcription"
+    ],
+    "child": "messages",
+    "description": "Get message transcription",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/locations/:locationId/messages/:messageId/transcription",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "send_message",
+    "aliases": [
+      "send",
+      "create"
+    ],
+    "child": "messages",
+    "description": "Send conversation message",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/messages",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_message_status",
+    "aliases": [
+      "update_status"
+    ],
+    "child": "messages",
+    "description": "Update message status",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/messages/:messageId/status",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "upload_message_attachment",
+    "aliases": [
+      "upload"
+    ],
+    "child": "messages",
+    "description": "Upload message attachment",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/messages/upload",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations/message.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "search_conversations",
+    "aliases": [
+      "search"
+    ],
+    "child": "search",
+    "description": "Search conversations",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/conversations/search",
+    "resolver_hints": [],
+    "root": "conversations",
+    "scope": "conversations.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "import_courses",
+    "aliases": [
+      "import"
+    ],
+    "child": "untagged",
+    "description": "Import courses",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/courses/courses-exporter/public/import",
+    "resolver_hints": [],
+    "root": "courses",
+    "scope": "courses.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_custom_field_by_id",
+    "aliases": [
+      "get"
+    ],
+    "child": "custom_fields_v2",
+    "description": "Get custom field by ID",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/custom-fields/:id",
+    "resolver_hints": [],
+    "root": "custom_fields_v2",
+    "scope": "locations/customFields.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_custom_field_by_object_key",
+    "aliases": [
+      "get_by_object_key"
+    ],
+    "child": "custom_fields_v2",
+    "description": "Get custom field by object key",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/custom-field/object-key/:key",
+    "resolver_hints": [],
+    "root": "custom_fields_v2",
+    "scope": "locations/customFields.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "create_custom_menu",
+    "aliases": [
+      "create"
+    ],
+    "child": "custom_menu_links",
+    "description": "Create custom menu",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/custom-menus/",
+    "resolver_hints": [],
+    "root": "custom_menus",
+    "scope": "custom-menu-link.write"
+  },
+  {
+    "access": "Agency",
+    "action": "delete_custom_menu",
+    "aliases": [
+      "delete"
+    ],
+    "child": "custom_menu_links",
+    "description": "Delete custom menu",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/custom-menus/:customMenuId",
+    "resolver_hints": [],
+    "root": "custom_menus",
+    "scope": "custom-menu-link.write"
+  },
+  {
+    "access": "Agency",
+    "action": "get_custom_menu",
+    "aliases": [
+      "get"
+    ],
+    "child": "custom_menu_links",
+    "description": "Get custom menu",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/custom-menus/:customMenuId",
+    "resolver_hints": [],
+    "root": "custom_menus",
+    "scope": "custom-menu-link.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "list_custom_menus",
+    "aliases": [
+      "list"
+    ],
+    "child": "custom_menu_links",
+    "description": "List custom menus",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/custom-menus/",
+    "resolver_hints": [],
+    "root": "custom_menus",
+    "scope": "custom-menu-link.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "update_custom_menu",
+    "aliases": [
+      "update"
+    ],
+    "child": "custom_menu_links",
+    "description": "Update custom menu",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/custom-menus/:customMenuId",
+    "resolver_hints": [],
+    "root": "custom_menus",
+    "scope": "custom-menu-link.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "delete_app_installation",
+    "aliases": [
+      "delete_installation"
+    ],
+    "child": "app_management",
+    "description": "Delete app installation",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/marketplace/app/:appId/installations",
+    "resolver_hints": [],
+    "root": "developer_marketplace",
+    "scope": "oauth.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "get_app_installations",
+    "aliases": [
+      "installations"
+    ],
+    "child": "app_management",
+    "description": "Get app installation details",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/marketplace/app/:appId/installations",
+    "resolver_hints": [],
+    "root": "developer_marketplace",
+    "scope": "marketplace-installer-details.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_charge",
+    "aliases": [
+      "create"
+    ],
+    "child": "wallet_charges",
+    "description": "Create wallet charge",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/marketplace/billing/charges",
+    "resolver_hints": [],
+    "root": "developer_marketplace",
+    "scope": "charges.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_charge",
+    "aliases": [
+      "delete"
+    ],
+    "child": "wallet_charges",
+    "description": "Delete wallet charge",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/marketplace/billing/charges/:chargeId",
+    "resolver_hints": [],
+    "root": "developer_marketplace",
+    "scope": "charges.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_charge",
+    "aliases": [
+      "get"
+    ],
+    "child": "wallet_charges",
+    "description": "Get wallet charge",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/marketplace/billing/charges/:chargeId",
+    "resolver_hints": [],
+    "root": "developer_marketplace",
+    "scope": "charges.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "has_funds",
+    "aliases": [
+      "has_funds"
+    ],
+    "child": "wallet_charges",
+    "description": "Check wallet funds",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/marketplace/billing/charges/has-funds",
+    "resolver_hints": [],
+    "root": "developer_marketplace",
+    "scope": "charges.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_charges",
+    "aliases": [
+      "list"
+    ],
+    "child": "wallet_charges",
+    "description": "List wallet charges",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/marketplace/billing/charges",
+    "resolver_hints": [],
+    "root": "developer_marketplace",
+    "scope": "charges.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_scheduled_email_campaigns",
+    "aliases": [
+      "list"
+    ],
+    "child": "campaigns",
+    "description": "List scheduled emails",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/emails/schedule",
+    "resolver_hints": [],
+    "root": "email",
+    "scope": "emails/schedule.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_email_template",
+    "aliases": [
+      "create"
+    ],
+    "child": "templates",
+    "description": "Create email builder template",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/emails/builder",
+    "resolver_hints": [],
+    "root": "email",
+    "scope": "emails/builder.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_email_template_data",
+    "aliases": [
+      "create_data"
+    ],
+    "child": "templates",
+    "description": "Create email template data",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/emails/builder/data",
+    "resolver_hints": [],
+    "root": "email",
+    "scope": "emails/builder.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_email_template",
+    "aliases": [
+      "delete"
+    ],
+    "child": "templates",
+    "description": "Delete email template",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/emails/builder/:locationId/:templateId",
+    "resolver_hints": [],
+    "root": "email",
+    "scope": "emails/builder.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_email_templates",
+    "aliases": [
+      "list"
+    ],
+    "child": "templates",
+    "description": "List email builder templates",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/emails/builder",
+    "resolver_hints": [],
+    "root": "email",
+    "scope": "emails/builder.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_form_submissions",
+    "aliases": [
+      "submissions"
+    ],
+    "child": "forms",
+    "description": "List form submissions",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/forms/submissions",
+    "resolver_hints": [],
+    "root": "forms",
+    "scope": "forms.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_forms",
+    "aliases": [
+      "list"
+    ],
+    "child": "forms",
+    "description": "List forms",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/forms/",
+    "resolver_hints": [],
+    "root": "forms",
+    "scope": "forms.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "upload_custom_files",
+    "aliases": [
+      "upload"
+    ],
+    "child": "forms",
+    "description": "Upload custom files",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/forms/upload-custom-files",
+    "resolver_hints": [],
+    "root": "forms",
+    "scope": "forms.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_page_count",
+    "aliases": [
+      "page_count"
+    ],
+    "child": "funnel",
+    "description": "Get funnel page count",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/funnels/page/count",
+    "resolver_hints": [],
+    "root": "funnels",
+    "scope": "funnels/pagecount.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_pages",
+    "aliases": [
+      "pages"
+    ],
+    "child": "funnel",
+    "description": "Get funnel pages",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/funnels/page",
+    "resolver_hints": [],
+    "root": "funnels",
+    "scope": "funnels/page.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_funnels",
+    "aliases": [
+      "list"
+    ],
+    "child": "funnel",
+    "description": "List funnels",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/funnels/funnel/list",
+    "resolver_hints": [],
+    "root": "funnels",
+    "scope": "funnels/funnel.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_redirect",
+    "aliases": [
+      "create"
+    ],
+    "child": "redirect",
+    "description": "Create funnel redirect",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/funnels/lookup/redirect",
+    "resolver_hints": [],
+    "root": "funnels",
+    "scope": "funnels/redirect.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_redirect",
+    "aliases": [
+      "delete"
+    ],
+    "child": "redirect",
+    "description": "Delete funnel redirect",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/funnels/lookup/redirect/:id",
+    "resolver_hints": [],
+    "root": "funnels",
+    "scope": "funnels/redirect.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_redirects",
+    "aliases": [
+      "list"
+    ],
+    "child": "redirect",
+    "description": "List funnel redirects",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/funnels/lookup/redirect/list",
+    "resolver_hints": [],
+    "root": "funnels",
+    "scope": "funnels/redirect.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_redirect",
+    "aliases": [
+      "update"
+    ],
+    "child": "redirect",
+    "description": "Update funnel redirect",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/funnels/lookup/redirect/:id",
+    "resolver_hints": [],
+    "root": "funnels",
+    "scope": "funnels/redirect.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "convert_estimate_to_invoice",
+    "aliases": [
+      "convert_to_invoice"
+    ],
+    "child": "estimate",
+    "description": "Convert estimate to invoice",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/:estimateId/invoice",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_estimate",
+    "aliases": [
+      "create"
+    ],
+    "child": "estimate",
+    "description": "Create estimate",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_estimate_template",
+    "aliases": [
+      "create_template"
+    ],
+    "child": "estimate",
+    "description": "Create estimate template",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/template",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_estimate",
+    "aliases": [
+      "delete"
+    ],
+    "child": "estimate",
+    "description": "Delete estimate",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/:estimateId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_estimate_template",
+    "aliases": [
+      "delete_template"
+    ],
+    "child": "estimate",
+    "description": "Delete estimate template",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/template/:templateId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "generate_estimate_number",
+    "aliases": [
+      "generate_number"
+    ],
+    "child": "estimate",
+    "description": "Generate estimate number",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/number/generate",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_estimate_template",
+    "aliases": [
+      "get_template"
+    ],
+    "child": "estimate",
+    "description": "Get estimate template",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/template",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_estimates",
+    "aliases": [
+      "list"
+    ],
+    "child": "estimate",
+    "description": "List estimates",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/list",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "patch_last_visited_at",
+    "aliases": [
+      "patch_last_visited_at"
+    ],
+    "child": "estimate",
+    "description": "Patch last visited at",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/stats/last-visited-at",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "preview_estimate_template",
+    "aliases": [
+      "preview_template"
+    ],
+    "child": "estimate",
+    "description": "Preview estimate template",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/template/preview",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "send_estimate",
+    "aliases": [
+      "send"
+    ],
+    "child": "estimate",
+    "description": "Send estimate",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/:estimateId/send",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_estimate",
+    "aliases": [
+      "update"
+    ],
+    "child": "estimate",
+    "description": "Update estimate",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/:estimateId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_estimate_template",
+    "aliases": [
+      "update_template"
+    ],
+    "child": "estimate",
+    "description": "Update estimate template",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/estimate/template/:templateId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/estimate.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_invoice",
+    "aliases": [
+      "create"
+    ],
+    "child": "invoice",
+    "description": "Create invoice",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_invoice",
+    "aliases": [
+      "delete"
+    ],
+    "child": "invoice",
+    "description": "Delete invoice",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/:invoiceId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "generate_invoice_number",
+    "aliases": [
+      "generate_number"
+    ],
+    "child": "invoice",
+    "description": "Generate invoice number",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/generate-invoice-number",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_invoice",
+    "aliases": [
+      "get"
+    ],
+    "child": "invoice",
+    "description": "Get invoice",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/:invoiceId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_invoices",
+    "aliases": [
+      "list"
+    ],
+    "child": "invoice",
+    "description": "List invoices",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "record_payment",
+    "aliases": [
+      "record_payment"
+    ],
+    "child": "invoice",
+    "description": "Record invoice payment",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/:invoiceId/record-payment",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "send_invoice",
+    "aliases": [
+      "send"
+    ],
+    "child": "invoice",
+    "description": "Send invoice",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/:invoiceId/send",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "text2pay",
+    "aliases": [
+      "text2pay"
+    ],
+    "child": "invoice",
+    "description": "Create text to pay invoice",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/text2pay",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_invoice",
+    "aliases": [
+      "update"
+    ],
+    "child": "invoice",
+    "description": "Update invoice",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/:invoiceId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "void_invoice",
+    "aliases": [
+      "void"
+    ],
+    "child": "invoice",
+    "description": "Void invoice",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/:invoiceId/void",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "auto_payment",
+    "aliases": [
+      "auto_payment"
+    ],
+    "child": "schedule",
+    "description": "Invoice schedule auto payment",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/schedule/:scheduleId/auto-payment",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/schedule.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "cancel_schedule",
+    "aliases": [
+      "cancel"
+    ],
+    "child": "schedule",
+    "description": "Cancel invoice schedule",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/schedule/:scheduleId/cancel",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/schedule.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_schedule",
+    "aliases": [
+      "create"
+    ],
+    "child": "schedule",
+    "description": "Create invoice schedule",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/schedule",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/schedule.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_schedule",
+    "aliases": [
+      "delete"
+    ],
+    "child": "schedule",
+    "description": "Delete invoice schedule",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/schedule/:scheduleId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/schedule.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_schedule",
+    "aliases": [
+      "get"
+    ],
+    "child": "schedule",
+    "description": "Get invoice schedule",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/schedule/:scheduleId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/schedule.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_schedules",
+    "aliases": [
+      "list"
+    ],
+    "child": "schedule",
+    "description": "List invoice schedules",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/schedule/",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/schedule.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "schedule_invoice",
+    "aliases": [
+      "schedule"
+    ],
+    "child": "schedule",
+    "description": "Schedule invoice",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/schedule/:scheduleId/schedule",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/schedule.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_schedule",
+    "aliases": [
+      "update"
+    ],
+    "child": "schedule",
+    "description": "Update invoice schedule",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/schedule/:scheduleId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/schedule.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_template",
+    "aliases": [
+      "create"
+    ],
+    "child": "template",
+    "description": "Create invoice template",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/template/",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/template.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_template",
+    "aliases": [
+      "delete"
+    ],
+    "child": "template",
+    "description": "Delete invoice template",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/template/:templateId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/template.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_template",
+    "aliases": [
+      "get"
+    ],
+    "child": "template",
+    "description": "Get invoice template",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/template/:templateId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/template.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_templates",
+    "aliases": [
+      "list"
+    ],
+    "child": "template",
+    "description": "List invoice templates",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/template/",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/template.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_template",
+    "aliases": [
+      "update"
+    ],
+    "child": "template",
+    "description": "Update invoice template",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/invoices/template/:templateId",
+    "resolver_hints": [],
+    "root": "invoice",
+    "scope": "invoices/template.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_faq",
+    "aliases": [
+      "create"
+    ],
+    "child": "faqs",
+    "description": "Create FAQ",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/faqs",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_faq",
+    "aliases": [
+      "delete"
+    ],
+    "child": "faqs",
+    "description": "Delete FAQ",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/faqs/:id",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_faqs",
+    "aliases": [
+      "list"
+    ],
+    "child": "faqs",
+    "description": "List FAQs",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/faqs",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_faq",
+    "aliases": [
+      "update"
+    ],
+    "child": "faqs",
+    "description": "Update FAQ",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/faqs/:id",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_knowledge_base",
+    "aliases": [
+      "create"
+    ],
+    "child": "knowledge_base",
+    "description": "Create knowledge base",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_knowledge_base",
+    "aliases": [
+      "delete"
+    ],
+    "child": "knowledge_base",
+    "description": "Delete knowledge base",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/:knowledgeBaseId",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_knowledge_base",
+    "aliases": [
+      "get"
+    ],
+    "child": "knowledge_base",
+    "description": "Get knowledge base",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/:knowledgeBaseId",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_knowledge_bases",
+    "aliases": [
+      "list"
+    ],
+    "child": "knowledge_base",
+    "description": "List knowledge bases",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_knowledge_base",
+    "aliases": [
+      "update"
+    ],
+    "child": "knowledge_base",
+    "description": "Update knowledge base",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/:knowledgeBaseId",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_trained_pages",
+    "aliases": [
+      "delete"
+    ],
+    "child": "web_crawler",
+    "description": "Delete trained pages",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/crawler",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_crawling_status",
+    "aliases": [
+      "status"
+    ],
+    "child": "web_crawler",
+    "description": "Get crawler status",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/crawler/status",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_trained_page_links",
+    "aliases": [
+      "list"
+    ],
+    "child": "web_crawler",
+    "description": "List trained page links",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/crawler",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "start_crawl",
+    "aliases": [
+      "crawl"
+    ],
+    "child": "web_crawler",
+    "description": "Start website crawl",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/crawler",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "train_discovered_pages",
+    "aliases": [
+      "train"
+    ],
+    "child": "web_crawler",
+    "description": "Train discovered pages",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/knowledge-bases/crawler/train",
+    "resolver_hints": [],
+    "root": "knowledge_base",
+    "scope": "knowledge-base.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "verify_email",
+    "aliases": [
+      "verify"
+    ],
+    "child": "email_verification",
+    "description": "Verify LC email",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/email-isv/verify",
+    "resolver_hints": [],
+    "root": "lc_email",
+    "scope": "email-isv.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_file",
+    "aliases": [
+      "delete"
+    ],
+    "child": "medias",
+    "description": "Delete media file",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/medias/:fileId",
+    "resolver_hints": [],
+    "root": "media_storage",
+    "scope": "medias.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_files",
+    "aliases": [
+      "list"
+    ],
+    "child": "medias",
+    "description": "List media files",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/medias/files",
+    "resolver_hints": [],
+    "root": "media_storage",
+    "scope": "medias.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "upload_file",
+    "aliases": [
+      "upload"
+    ],
+    "child": "medias",
+    "description": "Upload media file",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/medias/upload-file",
+    "resolver_hints": [],
+    "root": "media_storage",
+    "scope": "medias.write"
+  },
+  {
+    "access": "Agency",
+    "action": "get_access_token",
+    "aliases": [
+      "token",
+      "exchange_token"
+    ],
+    "child": "oauth_2_0",
+    "description": "Exchange an OAuth code or refresh token for an access token",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/oauth/token",
+    "resolver_hints": [],
+    "root": "oauth_2_0",
+    "scope": "oauth.write"
+  },
+  {
+    "access": "Agency",
+    "action": "get_installed_locations",
+    "aliases": [
+      "installed_locations"
+    ],
+    "child": "oauth_2_0",
+    "description": "Get locations where the app is installed",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/oauth/installedLocations",
+    "resolver_hints": [],
+    "root": "oauth_2_0",
+    "scope": "oauth.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "get_location_access_token",
+    "aliases": [
+      "location_token"
+    ],
+    "child": "oauth_2_0",
+    "description": "Get Location Access Token from Agency Token",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/oauth/locationToken",
+    "resolver_hints": [],
+    "root": "oauth_2_0",
+    "scope": "oauth.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_object_schema",
+    "aliases": [
+      "get"
+    ],
+    "child": "object_schema",
+    "description": "Get object schema",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/objects/:key",
+    "resolver_hints": [],
+    "root": "objects",
+    "scope": "objects/schema.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_object_schemas",
+    "aliases": [
+      "list"
+    ],
+    "child": "object_schema",
+    "description": "List object schemas",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/objects",
+    "resolver_hints": [],
+    "root": "objects",
+    "scope": "objects/schema.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_record",
+    "aliases": [
+      "create"
+    ],
+    "child": "records",
+    "description": "Create object record",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/objects/:schemaKey/records",
+    "resolver_hints": [],
+    "root": "objects",
+    "scope": "objects/record.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_record",
+    "aliases": [
+      "delete"
+    ],
+    "child": "records",
+    "description": "Delete object record",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/objects/:schemaKey/records/:id",
+    "resolver_hints": [],
+    "root": "objects",
+    "scope": "objects/record.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_record_by_id",
+    "aliases": [
+      "get"
+    ],
+    "child": "records",
+    "description": "Get object record",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/objects/:schemaKey/records/:id",
+    "resolver_hints": [],
+    "root": "objects",
+    "scope": "objects/record.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_record",
+    "aliases": [
+      "update"
+    ],
+    "child": "records",
+    "description": "Update object record",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/objects/:schemaKey/records/:id",
+    "resolver_hints": [],
+    "root": "objects",
+    "scope": "objects/record.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "search_object_records",
+    "aliases": [
+      "search"
+    ],
+    "child": "search_object_records",
+    "description": "Search object records",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/objects/:schemaKey/records/search",
+    "resolver_hints": [],
+    "root": "objects",
+    "scope": "objects/record.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_opportunity",
+    "aliases": [
+      "create"
+    ],
+    "child": "opportunities",
+    "description": "Create opportunity",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/opportunities",
+    "resolver_hints": [],
+    "root": "opportunities",
+    "scope": "opportunities.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_opportunity",
+    "aliases": [
+      "delete"
+    ],
+    "child": "opportunities",
+    "description": "Delete opportunity",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/opportunities/:id",
+    "resolver_hints": [],
+    "root": "opportunities",
+    "scope": "opportunities.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_opportunity",
+    "aliases": [
+      "get"
+    ],
+    "child": "opportunities",
+    "description": "Get opportunity",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/opportunities/:id",
+    "resolver_hints": [],
+    "root": "opportunities",
+    "scope": "opportunities.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_opportunity",
+    "aliases": [
+      "update"
+    ],
+    "child": "opportunities",
+    "description": "Update opportunity",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/opportunities/:id",
+    "resolver_hints": [],
+    "root": "opportunities",
+    "scope": "opportunities.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_status",
+    "aliases": [
+      "update_status"
+    ],
+    "child": "opportunities",
+    "description": "Update opportunity status",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/opportunities/:id/status",
+    "resolver_hints": [],
+    "root": "opportunities",
+    "scope": "opportunities.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_pipelines",
+    "aliases": [
+      "list"
+    ],
+    "child": "pipelines",
+    "description": "Get pipelines",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/opportunities/pipelines",
+    "resolver_hints": [],
+    "root": "opportunities",
+    "scope": "opportunities.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "search_opportunities",
+    "aliases": [
+      "search",
+      "list"
+    ],
+    "child": "search",
+    "description": "Search opportunities",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/opportunities/search",
+    "resolver_hints": [],
+    "root": "opportunities",
+    "scope": "opportunities.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_coupon",
+    "aliases": [
+      "create"
+    ],
+    "child": "coupons",
+    "description": "Create coupon",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/coupon",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/coupons.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_coupon",
+    "aliases": [
+      "delete"
+    ],
+    "child": "coupons",
+    "description": "Delete coupon",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/coupon",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/coupons.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_coupon",
+    "aliases": [
+      "get"
+    ],
+    "child": "coupons",
+    "description": "Get coupon",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/coupon",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/coupons.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_coupons",
+    "aliases": [
+      "list"
+    ],
+    "child": "coupons",
+    "description": "List coupons",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/coupon/list",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/coupons.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_coupon",
+    "aliases": [
+      "update"
+    ],
+    "child": "coupons",
+    "description": "Update coupon",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/coupon",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/coupons.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "connect",
+    "aliases": [
+      "connect"
+    ],
+    "child": "custom_provider",
+    "description": "Connect custom provider",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/custom-provider/connect",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/custom-provider.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_provider",
+    "aliases": [
+      "create"
+    ],
+    "child": "custom_provider",
+    "description": "Create custom payment provider",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/custom-provider/provider",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/custom-provider.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_provider",
+    "aliases": [
+      "delete"
+    ],
+    "child": "custom_provider",
+    "description": "Delete custom provider",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/custom-provider/provider",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/custom-provider.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "disconnect",
+    "aliases": [
+      "disconnect"
+    ],
+    "child": "custom_provider",
+    "description": "Disconnect custom provider",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/custom-provider/disconnect",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/custom-provider.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_connect_url",
+    "aliases": [
+      "connect_url"
+    ],
+    "child": "custom_provider",
+    "description": "Get custom provider connect URL",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/custom-provider/connect",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/custom-provider.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_capabilities",
+    "aliases": [
+      "capabilities"
+    ],
+    "child": "custom_provider",
+    "description": "Update provider capabilities",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/custom-provider/capabilities",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/custom-provider.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_whitelabel_provider",
+    "aliases": [
+      "create"
+    ],
+    "child": "integrations",
+    "description": "Create whitelabel payment provider",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/integrations/provider/whitelabel",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/integration.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_whitelabel_provider",
+    "aliases": [
+      "get"
+    ],
+    "child": "integrations",
+    "description": "Get whitelabel payment provider",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/integrations/provider/whitelabel",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/integration.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_fulfillment",
+    "aliases": [
+      "create"
+    ],
+    "child": "order_fulfillments",
+    "description": "Create order fulfillment",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/orders/:orderId/fulfillments",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/orders.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_fulfillments",
+    "aliases": [
+      "list"
+    ],
+    "child": "order_fulfillments",
+    "description": "List order fulfillments",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/orders/:orderId/fulfillments",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/orders.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_order",
+    "aliases": [
+      "get"
+    ],
+    "child": "orders",
+    "description": "Get order",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/orders/:orderId",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/orders.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_orders",
+    "aliases": [
+      "list"
+    ],
+    "child": "orders",
+    "description": "List orders",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/orders/",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/orders.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_subscription",
+    "aliases": [
+      "get"
+    ],
+    "child": "subscriptions",
+    "description": "Get subscription",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/subscriptions/:subscriptionId",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/subscriptions.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_subscriptions",
+    "aliases": [
+      "list"
+    ],
+    "child": "subscriptions",
+    "description": "List subscriptions",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/subscriptions/",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/subscriptions.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_transaction",
+    "aliases": [
+      "get"
+    ],
+    "child": "transactions",
+    "description": "Get transaction",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/transactions/:transactionId",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/transactions.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_transactions",
+    "aliases": [
+      "list"
+    ],
+    "child": "transactions",
+    "description": "List transactions",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/payments/transactions/",
+    "resolver_hints": [],
+    "root": "payments",
+    "scope": "payments/transactions.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_number_pools",
+    "aliases": [
+      "list"
+    ],
+    "child": "number_pools",
+    "description": "List number pools",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/phone-system/number-pools",
+    "resolver_hints": [],
+    "root": "phone_system",
+    "scope": "numberpools.read"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_phone_numbers",
+    "aliases": [
+      "list"
+    ],
+    "child": "phone_numbers",
+    "description": "List phone numbers",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/phone-system/numbers/location/:locationId",
+    "resolver_hints": [],
+    "root": "phone_system",
+    "scope": "phonenumbers.read"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_collection",
+    "aliases": [
+      "create"
+    ],
+    "child": "collections",
+    "description": "Create collection",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/collections",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/collection.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_collection",
+    "aliases": [
+      "delete"
+    ],
+    "child": "collections",
+    "description": "Delete collection",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/collections/:collectionId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/collection.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_collection",
+    "aliases": [
+      "get"
+    ],
+    "child": "collections",
+    "description": "Get collection",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/collections/:collectionId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/collection.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_collections",
+    "aliases": [
+      "list"
+    ],
+    "child": "collections",
+    "description": "List collections",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/collections",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/collection.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_collection",
+    "aliases": [
+      "update"
+    ],
+    "child": "collections",
+    "description": "Update collection",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/collections/:collectionId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/collection.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_price",
+    "aliases": [
+      "create"
+    ],
+    "child": "prices",
+    "description": "Create product price",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/:productId/price/",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/prices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_price",
+    "aliases": [
+      "delete"
+    ],
+    "child": "prices",
+    "description": "Delete product price",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/:productId/price/:priceId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/prices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_price",
+    "aliases": [
+      "get"
+    ],
+    "child": "prices",
+    "description": "Get product price",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/:productId/price/:priceId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/prices.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_prices",
+    "aliases": [
+      "list"
+    ],
+    "child": "prices",
+    "description": "List product prices",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/:productId/price/",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/prices.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_price",
+    "aliases": [
+      "update"
+    ],
+    "child": "prices",
+    "description": "Update product price",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/:productId/price/:priceId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products/prices.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "bulk_update_products",
+    "aliases": [
+      "bulk_update"
+    ],
+    "child": "products",
+    "description": "Bulk update products",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/bulk-update",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_product",
+    "aliases": [
+      "create"
+    ],
+    "child": "products",
+    "description": "Create product",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_product",
+    "aliases": [
+      "delete"
+    ],
+    "child": "products",
+    "description": "Delete product",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/:productId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_product",
+    "aliases": [
+      "get"
+    ],
+    "child": "products",
+    "description": "Get product",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/:productId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_products",
+    "aliases": [
+      "list"
+    ],
+    "child": "products",
+    "description": "List products",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_product",
+    "aliases": [
+      "update"
+    ],
+    "child": "products",
+    "description": "Update product",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/:productId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "bulk_update_reviews",
+    "aliases": [
+      "bulk_update"
+    ],
+    "child": "reviews",
+    "description": "Bulk update reviews",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/reviews/bulk-update",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "count_reviews",
+    "aliases": [
+      "count"
+    ],
+    "child": "reviews",
+    "description": "Count reviews",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/reviews/count",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_review",
+    "aliases": [
+      "delete"
+    ],
+    "child": "reviews",
+    "description": "Delete review",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/reviews/:reviewId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_reviews",
+    "aliases": [
+      "list"
+    ],
+    "child": "reviews",
+    "description": "List reviews",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/reviews",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_review",
+    "aliases": [
+      "update"
+    ],
+    "child": "reviews",
+    "description": "Update review",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/reviews/:reviewId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_store_product",
+    "aliases": [
+      "create"
+    ],
+    "child": "store",
+    "description": "Create store product",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/store/:storeId",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_store_stats",
+    "aliases": [
+      "stats"
+    ],
+    "child": "store",
+    "description": "Get product store stats",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/products/store/:storeId/stats",
+    "resolver_hints": [],
+    "root": "products",
+    "scope": "products.readonly"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "list_documents",
+    "aliases": [
+      "list"
+    ],
+    "child": "documents",
+    "description": "List proposal documents",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/proposals/document",
+    "resolver_hints": [],
+    "root": "proposals",
+    "scope": "documents_contracts/list.readonly"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "send_document_link",
+    "aliases": [
+      "send"
+    ],
+    "child": "documents",
+    "description": "Send proposal document link",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/proposals/document/send",
+    "resolver_hints": [],
+    "root": "proposals",
+    "scope": "documents_contracts/sendlink.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "list_templates",
+    "aliases": [
+      "list"
+    ],
+    "child": "templates",
+    "description": "List proposal templates",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/proposals/templates",
+    "resolver_hints": [],
+    "root": "proposals",
+    "scope": "documents_contracts_templates/list.readonly"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "send_template_link",
+    "aliases": [
+      "send"
+    ],
+    "child": "templates",
+    "description": "Send proposal template link",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/proposals/templates/send",
+    "resolver_hints": [],
+    "root": "proposals",
+    "scope": "documents_contracts_templates/sendlink.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "bulk_disable_saas",
+    "aliases": [
+      "bulk_disable"
+    ],
+    "child": "saas",
+    "description": "Bulk disable SaaS",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/bulk-disable-saas/:companyId",
+    "resolver_hints": [],
+    "root": "saas",
+    "scope": "saas/company.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "enable_saas",
+    "aliases": [
+      "enable"
+    ],
+    "child": "saas",
+    "description": "Enable SaaS",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/enable-saas/:locationId",
+    "resolver_hints": [],
+    "root": "saas",
+    "scope": "saas/location.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "list_locations",
+    "aliases": [
+      "locations"
+    ],
+    "child": "saas",
+    "description": "List SaaS locations",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations",
+    "resolver_hints": [],
+    "root": "saas",
+    "scope": "saas/location.read"
+  },
+  {
+    "access": "Agency",
+    "action": "update_saas_subscription",
+    "aliases": [
+      "update_subscription"
+    ],
+    "child": "saas",
+    "description": "Update SaaS subscription",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/update-saas-subscription/:locationId",
+    "resolver_hints": [],
+    "root": "saas",
+    "scope": "saas/location.write"
+  },
+  {
+    "access": "Agency",
+    "action": "create_share_link",
+    "aliases": [
+      "share_link"
+    ],
+    "child": "snapshots",
+    "description": "Create snapshot share link",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/snapshots/share/link",
+    "resolver_hints": [],
+    "root": "snapshots",
+    "scope": "snapshots.write"
+  },
+  {
+    "access": "Agency",
+    "action": "get_location_snapshot_status",
+    "aliases": [
+      "location_status"
+    ],
+    "child": "snapshots",
+    "description": "Get location snapshot status",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/snapshots/snapshot-status/:snapshotId/location/:locationId",
+    "resolver_hints": [],
+    "root": "snapshots",
+    "scope": "snapshots.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "get_snapshot_status",
+    "aliases": [
+      "status"
+    ],
+    "child": "snapshots",
+    "description": "Get snapshot status",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/snapshots/snapshot-status/:snapshotId",
+    "resolver_hints": [],
+    "root": "snapshots",
+    "scope": "snapshots.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "list_snapshots",
+    "aliases": [
+      "list"
+    ],
+    "child": "snapshots",
+    "description": "List snapshots",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/snapshots",
+    "resolver_hints": [],
+    "root": "snapshots",
+    "scope": "snapshots.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_account",
+    "aliases": [
+      "delete"
+    ],
+    "child": "account",
+    "description": "Delete account",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/accounts/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/account.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_accounts",
+    "aliases": [
+      "list"
+    ],
+    "child": "account",
+    "description": "Get list of accounts and groups",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/accounts",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/account.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_category",
+    "aliases": [
+      "get"
+    ],
+    "child": "category",
+    "description": "Get category",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/categories/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/category.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_categories",
+    "aliases": [
+      "list"
+    ],
+    "child": "category",
+    "description": "List categories",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/categories",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/category.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_csv",
+    "aliases": [
+      "create"
+    ],
+    "child": "csv",
+    "description": "Create CSV",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/csv",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/csv.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_csv",
+    "aliases": [
+      "delete"
+    ],
+    "child": "csv",
+    "description": "Delete CSV",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/csv/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/csv.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_csv_post",
+    "aliases": [
+      "delete_post"
+    ],
+    "child": "csv",
+    "description": "Delete CSV post",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/csv/:csvId/post/:postId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/csv.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_csv",
+    "aliases": [
+      "get"
+    ],
+    "child": "csv",
+    "description": "Get CSV",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/csv/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/csv.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_csv",
+    "aliases": [
+      "list"
+    ],
+    "child": "csv",
+    "description": "List CSVs",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/csv",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/csv.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "set_accounts",
+    "aliases": [
+      "set_accounts"
+    ],
+    "child": "csv",
+    "description": "Set accounts",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/set-accounts",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/csv.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_csv",
+    "aliases": [
+      "update"
+    ],
+    "child": "csv",
+    "description": "Update CSV",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/csv/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/csv.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_facebook_accounts",
+    "aliases": [
+      "get_accounts"
+    ],
+    "child": "oauth_facebook",
+    "description": "Get Facebook accounts",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/facebook/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "set_facebook_accounts",
+    "aliases": [
+      "set_accounts"
+    ],
+    "child": "oauth_facebook",
+    "description": "Set Facebook accounts",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/facebook/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "start_facebook_oauth",
+    "aliases": [
+      "start"
+    ],
+    "child": "oauth_facebook",
+    "description": "Start Facebook OAuth",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/facebook/start",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_google_locations",
+    "aliases": [
+      "get_locations"
+    ],
+    "child": "oauth_google",
+    "description": "Get Google locations",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/google/locations/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "set_google_locations",
+    "aliases": [
+      "set_locations"
+    ],
+    "child": "oauth_google",
+    "description": "Set Google business locations",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/google/locations/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "start_google_oauth",
+    "aliases": [
+      "start"
+    ],
+    "child": "oauth_google",
+    "description": "Start Google OAuth",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/google/start",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_instagram_accounts",
+    "aliases": [
+      "get_accounts"
+    ],
+    "child": "oauth_instagram",
+    "description": "Get Instagram accounts",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/instagram/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "set_instagram_accounts",
+    "aliases": [
+      "set_accounts"
+    ],
+    "child": "oauth_instagram",
+    "description": "Set Instagram accounts",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/instagram/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "start_instagram_oauth",
+    "aliases": [
+      "start"
+    ],
+    "child": "oauth_instagram",
+    "description": "Start Instagram OAuth",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/instagram/start",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_linkedin_accounts",
+    "aliases": [
+      "get_accounts"
+    ],
+    "child": "oauth_linkedin",
+    "description": "Get LinkedIn accounts",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/linkedin/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "set_linkedin_accounts",
+    "aliases": [
+      "set_accounts"
+    ],
+    "child": "oauth_linkedin",
+    "description": "Set LinkedIn accounts",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/linkedin/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "start_linkedin_oauth",
+    "aliases": [
+      "start"
+    ],
+    "child": "oauth_linkedin",
+    "description": "Start LinkedIn OAuth",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/linkedin/start",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_tiktok_accounts",
+    "aliases": [
+      "get_accounts"
+    ],
+    "child": "oauth_tiktok",
+    "description": "Get TikTok accounts",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/tiktok/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_tiktok_business_accounts",
+    "aliases": [
+      "get_business_accounts"
+    ],
+    "child": "oauth_tiktok",
+    "description": "Get TikTok Business accounts",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/tiktok-business/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "set_tiktok_accounts",
+    "aliases": [
+      "set_accounts"
+    ],
+    "child": "oauth_tiktok",
+    "description": "Set TikTok accounts",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/tiktok/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "start_tiktok_business_oauth",
+    "aliases": [
+      "start_business"
+    ],
+    "child": "oauth_tiktok",
+    "description": "Start TikTok Business OAuth",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/tiktok-business/start",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "start_tiktok_oauth",
+    "aliases": [
+      "start"
+    ],
+    "child": "oauth_tiktok",
+    "description": "Start TikTok OAuth",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/tiktok/start",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_twitter_accounts",
+    "aliases": [
+      "get_accounts"
+    ],
+    "child": "oauth_twitter",
+    "description": "Get Twitter accounts",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/twitter/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "set_twitter_accounts",
+    "aliases": [
+      "set_accounts"
+    ],
+    "child": "oauth_twitter",
+    "description": "Set Twitter accounts",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/:locationId/twitter/accounts/:accountId",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "start_twitter_oauth",
+    "aliases": [
+      "start"
+    ],
+    "child": "oauth_twitter",
+    "description": "Start Twitter OAuth",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/oauth/twitter/start",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/oauth.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "bulk_delete_posts",
+    "aliases": [
+      "bulk_delete"
+    ],
+    "child": "post",
+    "description": "Bulk delete social planner posts",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/posts/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/post.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_post",
+    "aliases": [
+      "create"
+    ],
+    "child": "post",
+    "description": "Create post",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/posts",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/post.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_post",
+    "aliases": [
+      "delete"
+    ],
+    "child": "post",
+    "description": "Delete post",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/posts/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/post.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "edit_post",
+    "aliases": [
+      "update",
+      "edit"
+    ],
+    "child": "post",
+    "description": "Edit post",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/posts/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/post.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_post",
+    "aliases": [
+      "get"
+    ],
+    "child": "post",
+    "description": "Get post",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/posts/:id",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/post.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_posts",
+    "aliases": [
+      "list"
+    ],
+    "child": "post",
+    "description": "Get posts",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/posts/list",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/post.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_statistics",
+    "aliases": [
+      "statistics"
+    ],
+    "child": "statistics",
+    "description": "Get social planner statistics",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/statistics",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/statistics.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_tag_details",
+    "aliases": [
+      "details"
+    ],
+    "child": "tag",
+    "description": "Get tag details",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/tags/details",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/tag.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_tags",
+    "aliases": [
+      "list"
+    ],
+    "child": "tag",
+    "description": "List tags",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/social-media-posting/:locationId/tags",
+    "resolver_hints": [],
+    "root": "social_planner",
+    "scope": "socialplanner/tag.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_shipping_carrier",
+    "aliases": [
+      "create"
+    ],
+    "child": "shipping_carrier",
+    "description": "Create shipping carrier",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-carrier",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_shipping_carrier",
+    "aliases": [
+      "delete"
+    ],
+    "child": "shipping_carrier",
+    "description": "Delete shipping carrier",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-carrier/:shippingCarrierId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_shipping_carrier",
+    "aliases": [
+      "get"
+    ],
+    "child": "shipping_carrier",
+    "description": "Get shipping carrier",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-carrier/:shippingCarrierId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_shipping_carriers",
+    "aliases": [
+      "list"
+    ],
+    "child": "shipping_carrier",
+    "description": "List shipping carriers",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-carrier",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_shipping_carrier",
+    "aliases": [
+      "update"
+    ],
+    "child": "shipping_carrier",
+    "description": "Update shipping carrier",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-carrier/:shippingCarrierId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_shipping_zone",
+    "aliases": [
+      "create"
+    ],
+    "child": "shipping_zone",
+    "description": "Create shipping zone",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_shipping_zone",
+    "aliases": [
+      "delete"
+    ],
+    "child": "shipping_zone",
+    "description": "Delete shipping zone",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/:shippingZoneId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_available_shipping_rates",
+    "aliases": [
+      "available_rates"
+    ],
+    "child": "shipping_zone",
+    "description": "Get available shipping rates",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/shipping-rates",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_shipping_zone",
+    "aliases": [
+      "get"
+    ],
+    "child": "shipping_zone",
+    "description": "Get shipping zone",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/:shippingZoneId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_shipping_zones",
+    "aliases": [
+      "list"
+    ],
+    "child": "shipping_zone",
+    "description": "List shipping zones",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_shipping_zone",
+    "aliases": [
+      "update"
+    ],
+    "child": "shipping_zone",
+    "description": "Update shipping zone",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/:shippingZoneId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_shipping_rate",
+    "aliases": [
+      "create"
+    ],
+    "child": "shipping_zone_rates",
+    "description": "Create shipping rate",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/:shippingZoneId/shipping-rate",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_shipping_rate",
+    "aliases": [
+      "delete"
+    ],
+    "child": "shipping_zone_rates",
+    "description": "Delete shipping rate",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/:shippingZoneId/shipping-rate/:shippingRateId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_shipping_rate",
+    "aliases": [
+      "get"
+    ],
+    "child": "shipping_zone_rates",
+    "description": "Get shipping rate",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/:shippingZoneId/shipping-rate/:shippingRateId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_shipping_rates",
+    "aliases": [
+      "list"
+    ],
+    "child": "shipping_zone_rates",
+    "description": "List shipping rates",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/:shippingZoneId/shipping-rate",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_shipping_rate",
+    "aliases": [
+      "update"
+    ],
+    "child": "shipping_zone_rates",
+    "description": "Update shipping rate",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/shipping-zone/:shippingZoneId/shipping-rate/:shippingRateId",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/shipping.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_or_update_store_settings",
+    "aliases": [
+      "create",
+      "update",
+      "upsert"
+    ],
+    "child": "store_setting",
+    "description": "Create or update store settings",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/store-setting",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/settings.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_store_settings",
+    "aliases": [
+      "get"
+    ],
+    "child": "store_setting",
+    "description": "Get store settings",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/store/store-setting",
+    "resolver_hints": [],
+    "root": "store",
+    "scope": "store/settings.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_custom_field",
+    "aliases": [
+      "create"
+    ],
+    "child": "custom_field",
+    "description": "Create custom field",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customFields",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customFields.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_custom_field",
+    "aliases": [
+      "delete"
+    ],
+    "child": "custom_field",
+    "description": "Delete custom field",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customFields/:id",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customFields.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_custom_field",
+    "aliases": [
+      "get"
+    ],
+    "child": "custom_field",
+    "description": "Get custom field",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customFields/:id",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customFields.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_custom_fields",
+    "aliases": [
+      "list"
+    ],
+    "child": "custom_field",
+    "description": "List custom fields",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customFields",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customFields.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_custom_field",
+    "aliases": [
+      "update"
+    ],
+    "child": "custom_field",
+    "description": "Update custom field",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customFields/:id",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customFields.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_custom_value",
+    "aliases": [
+      "create"
+    ],
+    "child": "custom_value",
+    "description": "Create custom value",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customValues",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customValues.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_custom_value",
+    "aliases": [
+      "delete"
+    ],
+    "child": "custom_value",
+    "description": "Delete custom value",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customValues/:id",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customValues.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_custom_value",
+    "aliases": [
+      "get"
+    ],
+    "child": "custom_value",
+    "description": "Get custom value",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customValues/:id",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customValues.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_custom_values",
+    "aliases": [
+      "list"
+    ],
+    "child": "custom_value",
+    "description": "List custom values",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customValues",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customValues.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_custom_value",
+    "aliases": [
+      "update"
+    ],
+    "child": "custom_value",
+    "description": "Update custom value",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/customValues/:id",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/customValues.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "search_locations",
+    "aliases": [
+      "search"
+    ],
+    "child": "search",
+    "description": "Search locations",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/search",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "create_location",
+    "aliases": [
+      "create"
+    ],
+    "child": "sub_account",
+    "description": "Create location",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations.write"
+  },
+  {
+    "access": "Agency",
+    "action": "delete_location",
+    "aliases": [
+      "delete"
+    ],
+    "child": "sub_account",
+    "description": "Delete location",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "get_location",
+    "aliases": [
+      "get"
+    ],
+    "child": "sub_account",
+    "description": "Get location",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations.readonly"
+  },
+  {
+    "access": "Agency",
+    "action": "update_location",
+    "aliases": [
+      "update"
+    ],
+    "child": "sub_account",
+    "description": "Update location",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_tag",
+    "aliases": [
+      "create"
+    ],
+    "child": "tags",
+    "description": "Create location tag",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/tags/",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/tags.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_tag",
+    "aliases": [
+      "delete"
+    ],
+    "child": "tags",
+    "description": "Delete location tag",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/tags/:tagId",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/tags.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_tag",
+    "aliases": [
+      "get"
+    ],
+    "child": "tags",
+    "description": "Get location tag",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/tags/:tagId",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/tags.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_tags",
+    "aliases": [
+      "list"
+    ],
+    "child": "tags",
+    "description": "List location tags",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/tags",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/tags.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_tag",
+    "aliases": [
+      "update"
+    ],
+    "child": "tags",
+    "description": "Update location tag",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/tags/:tagId",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/tags.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "search_tasks",
+    "aliases": [
+      "search"
+    ],
+    "child": "tasks_search",
+    "description": "Search tasks",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/tasks/search",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/tasks.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_templates",
+    "aliases": [
+      "list"
+    ],
+    "child": "template",
+    "description": "List location templates",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/:locationId/templates",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations/templates.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_timezones",
+    "aliases": [
+      "timezones"
+    ],
+    "child": "timezone",
+    "description": "List timezones",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/locations/timeZones",
+    "resolver_hints": [],
+    "root": "sub_account",
+    "scope": "locations.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_survey_submissions",
+    "aliases": [
+      "submissions"
+    ],
+    "child": "surveys",
+    "description": "List survey submissions",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/surveys/submissions",
+    "resolver_hints": [],
+    "root": "surveys",
+    "scope": "surveys.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_surveys",
+    "aliases": [
+      "list"
+    ],
+    "child": "surveys",
+    "description": "List surveys",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/surveys/",
+    "resolver_hints": [],
+    "root": "surveys",
+    "scope": "surveys.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_trigger_link",
+    "aliases": [
+      "create"
+    ],
+    "child": "trigger_links",
+    "description": "Create trigger link",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/links/",
+    "resolver_hints": [],
+    "root": "trigger_links",
+    "scope": "links.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_trigger_link",
+    "aliases": [
+      "delete"
+    ],
+    "child": "trigger_links",
+    "description": "Delete trigger link",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/links/:linkId",
+    "resolver_hints": [],
+    "root": "trigger_links",
+    "scope": "links.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_trigger_links",
+    "aliases": [
+      "list"
+    ],
+    "child": "trigger_links",
+    "description": "List trigger links",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/links/",
+    "resolver_hints": [],
+    "root": "trigger_links",
+    "scope": "links.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_trigger_link",
+    "aliases": [
+      "update"
+    ],
+    "child": "trigger_links",
+    "description": "Update trigger link",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/links/:linkId",
+    "resolver_hints": [],
+    "root": "trigger_links",
+    "scope": "links.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "create_user",
+    "aliases": [
+      "create"
+    ],
+    "child": "users",
+    "description": "Create user",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/users/",
+    "resolver_hints": [],
+    "root": "users",
+    "scope": "users.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "delete_user",
+    "aliases": [
+      "delete"
+    ],
+    "child": "users",
+    "description": "Delete user",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/users/:userId",
+    "resolver_hints": [],
+    "root": "users",
+    "scope": "users.write"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "get_user",
+    "aliases": [
+      "get"
+    ],
+    "child": "users",
+    "description": "Get user",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/users/:userId",
+    "resolver_hints": [],
+    "root": "users",
+    "scope": "users.readonly"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "list_users",
+    "aliases": [
+      "list"
+    ],
+    "child": "users",
+    "description": "List users",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/users/",
+    "resolver_hints": [],
+    "root": "users",
+    "scope": "users.readonly"
+  },
+  {
+    "access": "Sub-Account,Agency",
+    "action": "update_user",
+    "aliases": [
+      "update"
+    ],
+    "child": "users",
+    "description": "Update user",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/users/:userId",
+    "resolver_hints": [],
+    "root": "users",
+    "scope": "users.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_action",
+    "aliases": [
+      "create"
+    ],
+    "child": "actions",
+    "description": "Create Voice AI action",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/actions",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agent-goals.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_action",
+    "aliases": [
+      "delete"
+    ],
+    "child": "actions",
+    "description": "Delete Voice AI action",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/actions/:actionId/agent/:agentId",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agent-goals.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_action",
+    "aliases": [
+      "get"
+    ],
+    "child": "actions",
+    "description": "Get Voice AI action",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/actions/:actionId",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agent-goals.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_action",
+    "aliases": [
+      "update"
+    ],
+    "child": "actions",
+    "description": "Update Voice AI action",
+    "doc_url": "",
+    "method": "PUT",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/actions/:actionId",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agent-goals.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "create_agent",
+    "aliases": [
+      "create"
+    ],
+    "child": "agents",
+    "description": "Create Voice AI agent",
+    "doc_url": "",
+    "method": "POST",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/agents",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "delete_agent",
+    "aliases": [
+      "delete"
+    ],
+    "child": "agents",
+    "description": "Delete Voice AI agent",
+    "doc_url": "",
+    "method": "DELETE",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/agents/:agentId",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_agent",
+    "aliases": [
+      "get"
+    ],
+    "child": "agents",
+    "description": "Get Voice AI agent",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/agents/:agentId",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agents.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_agents",
+    "aliases": [
+      "list"
+    ],
+    "child": "agents",
+    "description": "List Voice AI agents",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/agents",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agents.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "update_agent",
+    "aliases": [
+      "update"
+    ],
+    "child": "agents",
+    "description": "Update Voice AI agent",
+    "doc_url": "",
+    "method": "PATCH",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/agents/:agentId",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-agents.write"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "get_call_log",
+    "aliases": [
+      "get"
+    ],
+    "child": "dashboard",
+    "description": "Get Voice AI call log",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/dashboard/call-logs/:callId",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-dashboard.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_call_logs",
+    "aliases": [
+      "list"
+    ],
+    "child": "dashboard",
+    "description": "List Voice AI call logs",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/voice-ai/dashboard/call-logs",
+    "resolver_hints": [],
+    "root": "voice_ai",
+    "scope": "voice-ai-dashboard.readonly"
+  },
+  {
+    "access": "Sub-Account",
+    "action": "list_workflows",
+    "aliases": [
+      "list"
+    ],
+    "child": "workflows",
+    "description": "List workflows",
+    "doc_url": "",
+    "method": "GET",
+    "multipart": false,
+    "paginated": false,
+    "path": "/workflows/",
+    "resolver_hints": [],
+    "root": "workflows",
+    "scope": "workflows.readonly"
+  }
+]

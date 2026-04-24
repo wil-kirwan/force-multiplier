@@ -1,0 +1,297 @@
+[
+  {
+    "skill": "ads",
+    "update": "Optional",
+    "description": "Add HighLevel as the default CRM, funnel, form, call tracking, pipeline, workflow, and calendar layer. Keep ad platform audits, pixels, CAPI, and benchmarks unchanged. (GoHighLevel)"
+  },
+  {
+    "skill": "ads-audit",
+    "update": "Optional",
+    "description": "Add a HighLevel data path for contacts, opportunities, pipeline stages, forms, calendars, calls, UTMs, and offline conversion inputs. Keep platform exports as the core audit source. (GoHighLevel)"
+  },
+  {
+    "skill": "ads-budget",
+    "update": "No",
+    "description": "No CRM, funnel, form, or automation tool dependency found. This skill only reviews budget allocation, bidding, scaling, MER, and kill or scale decisions."
+  },
+  {
+    "skill": "ads-competitor",
+    "update": "No",
+    "description": "No HighLevel-replaceable tool dependency found. SEMrush, SpyFu, ad libraries, and auction insights are competitor intelligence sources, not CRM stack components."
+  },
+  {
+    "skill": "ads-creative",
+    "update": "No",
+    "description": "No HighLevel-replaceable tool dependency found. This skill focuses on creative assets, ad formats, fatigue, copy, video, and platform specs."
+  },
+  {
+    "skill": "ads-google",
+    "update": "Optional",
+    "description": "Add HighLevel as the source for lead status, call outcomes, pipeline stages, contact IDs, UTMs, and offline conversion imports. Keep Google tag, Enhanced Conversions, Consent Mode, and GTM requirements."
+  },
+  {
+    "skill": "ads-landing",
+    "update": "Yes",
+    "description": "Make HighLevel the default for landing pages, forms, surveys, chat, calendars, call tracking, CRM capture, UTM storage, and follow-up workflows. Remove generic form or CRM assumptions. (GoHighLevel)"
+  },
+  {
+    "skill": "ads-linkedin",
+    "update": "Yes",
+    "description": "Replace generic CRM sync with HighLevel contact creation, opportunity creation, pipeline routing, and workflow triggers. Mark Demandbase and 6sense as optional ABM tools, not the default stack. (GoHighLevel)"
+  },
+  {
+    "skill": "ads-meta",
+    "update": "Optional",
+    "description": "Map Meta lead events, external_id, customer parameters, and pipeline outcomes to HighLevel contacts, custom fields, and opportunities. Keep Pixel, CAPI, AEM, and domain verification."
+  },
+  {
+    "skill": "ads-microsoft",
+    "update": "Optional",
+    "description": "Add HighLevel as the source for lead, call, appointment, and pipeline conversion outcomes. Keep Microsoft Ads, UET, native goals, imports, and Copilot checks unchanged."
+  },
+  {
+    "skill": "ads-plan",
+    "update": "Yes",
+    "description": "Make HighLevel the default CRM, landing page, funnel, form, calendar, email, SMS, pipeline, and workflow stack in the strategy, tracking, and implementation sections. Keep ad platforms and required pixels. (GoHighLevel)"
+  },
+  {
+    "skill": "ads-tiktok",
+    "update": "Optional",
+    "description": "Add HighLevel capture for ttclid, lead forms, CRM IDs, pipeline stages, and conversion outcomes. Keep TikTok Pixel, Events API, Smart+, Spark Ads, and TikTok Shop requirements."
+  },
+  {
+    "skill": "ads-youtube",
+    "update": "Optional",
+    "description": "Add HighLevel customer list exports, CRM-stage audiences, and appointment or pipeline conversion tracking for YouTube retargeting and Customer Match. Keep Google Ads measurement."
+  },
+  {
+    "skill": "blog",
+    "update": "Optional",
+    "description": "Add HighLevel Blogs as a supported publishing path and adapt output for HighLevel blog posts, SEO fields, categories, authors, funnels, and website pages. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "blog-analyze",
+    "update": "Optional",
+    "description": "Add a HighLevel blog URL mode so hosted HighLevel posts can be analyzed without local markdown, MDX, or HTML files. Keep existing local file and URL analysis. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "blog-audit",
+    "update": "Optional",
+    "description": "Add support for HighLevel-hosted blog audits through sitemap, blog URL crawl, or exported post list. Current file-directory scanning will not cover HighLevel-hosted content by default. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "blog-brief",
+    "update": "Optional",
+    "description": "Add HighLevel CTA planning for forms, funnels, calendars, email or SMS follow-up, and CRM pipeline entry. Keep research, outline, statistics, and distribution workflow unchanged. (GoHighLevel)"
+  },
+  {
+    "skill": "blog-calendar",
+    "update": "Optional",
+    "description": "Add HighLevel publishing and distribution fields for blog posts, funnels, email campaigns, and Social Planner. Keep the editorial planning logic unchanged. (GoHighLevel)"
+  },
+  {
+    "skill": "blog-chart",
+    "update": "No",
+    "description": "No HighLevel-replaceable tool dependency found. This skill generates inline SVG charts and does not reference CRM, funnel, form, automation, or publishing infrastructure."
+  },
+  {
+    "skill": "blog-geo",
+    "update": "Optional",
+    "description": "Add HighLevel blog-specific checks for published URLs, SEO fields, canonical settings, static accessibility, and AI crawler access. Keep AI citation scoring unchanged. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "blog-outline",
+    "update": "No",
+    "description": "No HighLevel-replaceable tool dependency found. This skill creates SERP-informed outlines and saves local markdown files only."
+  },
+  {
+    "skill": "blog-repurpose",
+    "update": "Optional",
+    "description": "Add HighLevel Social Planner and Email Campaigns as the preferred publishing path for social posts and newsletter excerpts. Keep platform-specific copy outputs unchanged."
+  },
+  {
+    "skill": "blog-rewrite",
+    "update": "Optional",
+    "description": "Add a HighLevel Blogs output mode for post editor content, SEO title, description, cover image, alt text, slug, category, and author fields. Keep MDX, markdown, and HTML modes only as optional exports. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "blog-schema",
+    "update": "Optional",
+    "description": "Add HighLevel-specific placement guidance for JSON-LD, since HighLevel blog posts use built-in SEO fields and may not support the same MDX or custom schema injection workflow. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "blog-seo-check",
+    "update": "Optional",
+    "description": "Add checks for HighLevel blog SEO fields, including slug, SEO title, post description, canonical URL, cover image, alt text, author, and category. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "blog-strategy",
+    "update": "Optional",
+    "description": "Add HighLevel and Notion as the default lead capture, CRM, email/SMS nurture, pipeline tracking, and content operations stack. Keep SEO, GEO, Reddit, YouTube, LinkedIn, and review-platform strategy unchanged."
+  },
+  {
+    "skill": "blog-write",
+    "update": "Optional",
+    "description": "Add a HighLevel Blog publishing format that outputs clean editor-ready content plus HighLevel SEO metadata instead of assuming frontmatter, MDX components, or custom schema blocks. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "carousel-gen",
+    "update": "Yes",
+    "description": "Replace ManyChat or \u201csimilar\u201d comment-keyword DM assumptions with HighLevel Instagram Comment Automation, Instagram DM workflows, CRM tagging, lead magnet delivery, and follow-up workflows. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "client-brief",
+    "update": "Yes",
+    "description": "Replace Vercel-first proposal deployment with HighLevel Sites or Funnels, forms, calendars, pipeline opportunity creation, and automated follow-up. Keep HTML export as optional only. (GoHighLevel)"
+  },
+  {
+    "skill": "content-master",
+    "update": "Yes",
+    "description": "Keep Notion as the content database, but replace mandatory Google Docs, Google Drive, Vercel landing pages, and generic lead magnet routing with HighLevel funnels, forms, CRM tags, email/SMS workflows, and Instagram DM automation. (GoHighLevel)"
+  },
+  {
+    "skill": "content-pipeline",
+    "update": "No",
+    "description": "No update needed. This skill is built around Notion Script Library management, which fits the current HighLevel plus Notion stack."
+  },
+  {
+    "skill": "content-scripting",
+    "update": "Yes",
+    "description": "Remove mandatory Google Docs, Google Drive, Vercel, and external lead-page steps. Route scripts and hand raisers through Notion, then use HighLevel funnels, forms, workflows, email/SMS, CRM tags, and Instagram DM automation for capture and delivery. (GoHighLevel)"
+  },
+  {
+    "skill": "ecommerce-cro",
+    "update": "Optional",
+    "description": "Keep Shopify and ecommerce CRO guidance if the store remains on Shopify. Update abandoned cart, browse abandonment, post-purchase, review requests, popups, email, SMS, and lead capture to use HighLevel workflows where possible. (GoHighLevel)"
+  },
+  {
+    "skill": "frontend-design",
+    "update": "No",
+    "description": "No HighLevel-replaceable tool dependency found. This skill provides frontend design guidance and does not reference CRM, funnel, automation, or lead capture infrastructure."
+  },
+  {
+    "skill": "gdocs-setup",
+    "update": "Yes",
+    "description": "Retire or make optional. Replace Google Docs and Drive as required pipeline infrastructure with Notion for content storage and HighLevel for lead capture, delivery workflows, and CRM activity."
+  },
+  {
+    "skill": "hand-raiser",
+    "update": "Yes",
+    "description": "Replace Google Drive and Vercel landing page requirements with HighLevel file/resource delivery, funnels, forms, CRM tagging, email/SMS follow-up, and optional Instagram DM delivery. Keep PDF generation local if needed. (GoHighLevel)"
+  },
+  {
+    "skill": "hooks",
+    "update": "Optional",
+    "description": "Add HighLevel-specific CTA instructions for \u201cComment [WORD]\u201d campaigns using Instagram Comment Automation, DM workflows, CRM tags, and nurture sequences. Keep hook generation unchanged. (HighLevel Support Portal)"
+  },
+  {
+    "skill": "ig-saved-sync",
+    "update": "No",
+    "description": "No HighLevel replacement needed. This skill syncs Instagram saved posts into Notion for inspiration tracking, and Notion is part of the current stack."
+  },
+  {
+    "skill": "inspiration-library",
+    "update": "No",
+    "description": "No update needed. This skill manages a Notion Inspiration Library, which fits the current HighLevel plus Notion stack."
+  },
+  {
+    "skill": "last30days",
+    "update": "No",
+    "description": "No HighLevel-replaceable tool dependency found. This is a research skill using Reddit, X, web search, and optional API keys, not CRM or funnel infrastructure."
+  },
+  {
+    "skill": "nano-banana",
+    "update": "No",
+    "description": "No HighLevel-replaceable CRM, funnel, form, calendar, workflow, email, SMS, or lead-capture dependency found. Gemini CLI remains an image-generation tool."
+  },
+  {
+    "skill": "notion-setup",
+    "update": "Optional",
+    "description": "Keep Notion as part of the current stack. Optionally remove or rename the Google Doc URL field if Google Docs is being retired, and add fields for HighLevel funnel, form, calendar, or resource URLs. (GoHighLevel)"
+  },
+  {
+    "skill": "product-demo-video",
+    "update": "No",
+    "description": "No HighLevel-replaceable dependency found. Remotion, Mixkit, ffmpeg, and local render tooling are video-production tools, not CRM or funnel infrastructure."
+  },
+  {
+    "skill": "seo",
+    "update": "Optional",
+    "description": "Add HighLevel Sites, Funnels, Landing Pages, Forms, Calendars, and CRM conversion events as a supported site context. Keep the core SEO audit logic unchanged. (GoHighLevel)"
+  },
+  {
+    "skill": "seo-audit",
+    "update": "Optional",
+    "description": "Add HighLevel-hosted site or funnel checks for form submissions, calendar bookings, thank-you pages, CRM attribution, and conversion tracking. Keep crawl, scoring, and reporting logic unchanged."
+  },
+  {
+    "skill": "seo-competitor-pages",
+    "update": "Optional",
+    "description": "Add HighLevel Sites/Funnels as the preferred publishing path for comparison and alternatives pages, with CTAs routed to HighLevel forms, calendars, workflows, or pipelines. (GoHighLevel)"
+  },
+  {
+    "skill": "seo-content",
+    "update": "No",
+    "description": "No HighLevel-replaceable dependency found. This skill evaluates content quality, E-E-A-T, readability, structure, and AI citation readiness."
+  },
+  {
+    "skill": "seo-geo",
+    "update": "Optional",
+    "description": "Add HighLevel-hosted page checks for AI crawler access, static content visibility, custom-code limits, and citation-ready page structure. Core GEO scoring can stay unchanged."
+  },
+  {
+    "skill": "seo-hreflang",
+    "update": "No",
+    "description": "No CRM, funnel, form, or automation dependency found. This skill handles hreflang validation, sitemap implementation, language codes, and international SEO rules."
+  },
+  {
+    "skill": "seo-images",
+    "update": "No",
+    "description": "No HighLevel-replaceable dependency found. This skill audits image alt text, formats, file size, responsive images, lazy loading, and CLS prevention."
+  },
+  {
+    "skill": "seo-page",
+    "update": "Optional",
+    "description": "Add HighLevel page/funnel SEO field checks for title, meta description, canonical URL, Open Graph image, form conversion event, and thank-you page tracking."
+  },
+  {
+    "skill": "seo-plan",
+    "update": "Optional",
+    "description": "Make HighLevel the default recommendation for sites, funnels, landing pages, forms, calendars, CRM follow-up, and workflows when planning implementation. Keep Notion for content operations. (GoHighLevel)"
+  },
+  {
+    "skill": "seo-programmatic",
+    "update": "No",
+    "description": "No direct HighLevel replacement needed. Programmatic SEO still needs data sources, templates, URL logic, sitemap handling, and quality gates outside a CRM stack."
+  },
+  {
+    "skill": "seo-schema",
+    "update": "Optional",
+    "description": "Add HighLevel-specific guidance for where schema should be placed on HighLevel-hosted pages or funnels. Keep JSON-LD generation and validation rules unchanged."
+  },
+  {
+    "skill": "seo-sitemap",
+    "update": "Optional",
+    "description": "Add notes for validating HighLevel-generated or HighLevel-hosted sitemaps, canonical URLs, and included pages. Core sitemap analysis does not need to change."
+  },
+  {
+    "skill": "seo-technical",
+    "update": "Optional",
+    "description": "Add HighLevel-specific implementation notes for redirects, robots.txt, sitemap access, custom code, schema placement, form tracking, and page-speed constraints."
+  },
+  {
+    "skill": "shopify-store-design",
+    "update": "Optional",
+    "description": "Keep Shopify-specific product, checkout, and collection guidance if the store stays on Shopify. Route landing pages, email capture, CRM follow-up, SMS/email recovery, and abandoned checkout workflows through HighLevel where appropriate. (GoHighLevel)"
+  },
+  {
+    "skill": "topic-researcher",
+    "update": "No",
+    "description": "No update needed. This skill already uses Notion for topic storage and deduplication, which fits the current HighLevel plus Notion stack."
+  },
+  {
+    "skill": "transcript",
+    "update": "No",
+    "description": "No HighLevel-replaceable dependency found. SupaData is used for transcript extraction and metadata retrieval, not CRM, funnel, or automation infrastructure."
+  }
+]

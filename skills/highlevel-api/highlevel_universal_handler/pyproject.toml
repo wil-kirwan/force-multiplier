@@ -1,0 +1,10 @@
+[project]
+name = "highlevel-universal-handler"
+version = "1.0.0"
+description = "Registry-driven Python handler for the HighLevel API V2"
+requires-python = ">=3.9"
+dependencies = ["requests>=2.31.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
