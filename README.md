@@ -25,7 +25,7 @@ npm install -g @anthropic-ai/claude-code
 ### 2. Clone This Repo
 
 ```bash
-git clone https://github.com/coopersimson96/ai-content-system.git ~/ai-content-system
+git clone https://github.com/wil-kirwan/ai-content-system.git ~/ai-content-system
 ```
 
 ### 3. Install Skills
@@ -52,10 +52,11 @@ Most skills work out of the box. For full functionality, connect these integrati
 
 | Integration | Required For | Setup |
 |---|---|---|
-| Notion MCP | Content pipeline, inspiration library | See Whop guide: Module 1.2 |
-| Google Docs/Drive | Script export, PDF hosting | See Whop guide: Module 1.3 |
-| Supadata API | Video transcript extraction | See Whop guide: Module 1.4 |
-| Gemini API | Image generation | See Whop guide: Module 1.5 |
+| Notion MCP | Content pipeline, inspiration library |  |
+| Google Docs/Drive | Script export, PDF hosting |  |
+| Supadata API | Video transcript extraction |  |
+| Gemini API | Image generation | |
+|Highlevel MCP | CRM integration, Blog posting, Social Media Posting | |
 
 Config templates are in `config-templates/`.
 
