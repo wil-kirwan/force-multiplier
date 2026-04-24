@@ -25,7 +25,7 @@ npm install -g @anthropic-ai/claude-code
 ### 2. Clone This Repo
 
 ```bash
-git clone https://github.com/wil-kirwan/ai-content-system.git ~/ai-content-system
+git clone https://github.com/wil-kirwan/force-multiplier.git ~/ai-content-system
 ```
 
 ### 3. Install Skills
