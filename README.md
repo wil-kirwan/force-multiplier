@@ -1,6 +1,6 @@
-# AI Content System
+# Founders Force Multiplier
 
-A complete AI-powered content creation system built on Claude Code. 52 skills across 7 categories — from topic research to script production, SEO audits, ad optimization, blog writing, image generation, and e-commerce CRO.
+A complete AI-powered content creation system built for use by Claude Code or Codex and HighLevel. 60 skills across 7 categories — from topic research to script production, SEO audits, ad optimization, blog writing, image generation, and e-commerce CRO.
 
 ## What's Included
 
@@ -16,10 +16,15 @@ A complete AI-powered content creation system built on Claude Code. 52 skills ac
 
 ## Quick Start
 
-### 1. Install Claude Code
+### 1A. Install Claude Code
 
 ```bash
 npm install -g @anthropic-ai/claude-code
+```
+### 1B. Install codex
+
+```bash
+npm install -g @openai/codex
 ```
 
 ### 2. Clone This Repo
@@ -29,9 +34,13 @@ git clone https://github.com/wil-kirwan/force-multiplier.git ~/ai-content-system
 ```
 
 ### 3. Install Skills
-
+For Claude:
 ```bash
-cp -r ~/ai-content-system/skills/* ~/.claude/skills/
+cp -r ~/force-multiplier/skills/* ~/.claude/skills/
+```
+For Codex:
+```bash
+cp -r ~/force-multiplier/skills/* ~/.codex/skills/
 ```
 
 ### 4. Verify
@@ -40,8 +49,14 @@ Open Claude Code and type `/hooks` — you should see the skill activate.
 
 ## Updating
 
+Claude:
 ```bash
-cd ~/ai-content-system && git pull && cp -r skills/* ~/.claude/skills/
+cd ~/force-multiplier && git pull && cp -r skills/* ~/.claude/skills/
+```
+
+Codex:
+```bash
+cd ~/force-multiplier && git pull && cp -r skills/* ~/.codex/skills/
 ```
 
 One command. Instant updates.
@@ -63,17 +78,18 @@ Config templates are in `config-templates/`.
 ## Repo Structure
 
 ```
-ai-content-system/
-├── skills/              # 52 Claude Code skills
+force-multiplier/
+├── skills/              # 60 Claude Code/Codex skills (and counting!)
 ├── scripts/             # Shared Python scripts (PDF gen, Google Docs, Drive)
 ├── config-templates/    # Example config files with placeholders
 ├── lead-pages-starter/  # Vercel landing page template for lead capture
+├── newsletter/          # Helper Scripts for newsletter, including scripts to run newsletter through beehiiv and HighLevel
 └── output/              # Default output directory
 ```
 
 ## Getting Help
 
-Full setup guides, video walkthroughs, and community support are available through the [Whop community](https://whop.com/).
+Full setup guides, video walkthroughs, and community support are available through the [Founders Force Multiplier Community](https://community.x20.io).
 
 ## License
 
