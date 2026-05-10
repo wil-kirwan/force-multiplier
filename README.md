@@ -30,7 +30,7 @@ npm install -g @openai/codex
 ### 2. Clone This Repo
 
 ```bash
-git clone https://github.com/wil-kirwan/force-multiplier.git ~/ai-content-system
+git clone https://github.com/wil-kirwan/force-multiplier.git ~/force-multiplier
 ```
 
 ### 3. Install Skills
