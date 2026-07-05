@@ -2,6 +2,11 @@
 
 All notable changes to the AI Content System will be documented in this file.
 
+## [Unreleased]
+
+### Added
+- `master` skill — end-to-end campaign orchestrator that chains the existing skills through the full workflow: outlier topic research → confirmed scripts → recording tracking → blog/hand-raiser/newsletter generation → HighLevel publishing (blog live Day 0, hand raisers in Media Storage with manifest JSON, newsletter scheduled Day +2) → Hyperframes/Social Planner posts to all platforms Day +1 → best-post-to-ad conversion at Day +7. Persists campaign state to `~/ai-content-system/campaigns/{slug}/campaign.json` so the multi-week timeline survives across sessions.
+
 ## [1.0.0] - 2026-03-03
 
 ### Added

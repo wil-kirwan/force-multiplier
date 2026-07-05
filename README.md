@@ -6,6 +6,7 @@ A complete AI-powered content creation system built for use by Claude Code or Co
 
 | Category | Skills | What It Does |
 |---|---|---|
+| Master Orchestrator | 1 | `/master` — runs the full campaign flywheel: research → scripts → recording → blog/hand raisers/newsletter into HighLevel → social posts → ads, on a fixed publishing timeline |
 | Content Creation | 7 | Topic research, script writing, hook frameworks, inspiration library, pipeline management |
 | Transcript & Lead Magnets | 2 | Video transcript extraction (any platform), PDF lead magnet generator |
 | SEO | 13 | Full site audits, technical SEO, schema, content quality, GEO, programmatic SEO |
